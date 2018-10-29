@@ -1,0 +1,78 @@
+/*
+ Theme Name:   Programadora Brasil
+ Author:       MediaLab UFG
+ Author URI:   https://github.com/medialab-ufg/tainacan-programadorabrasil
+ Description:  Tema desenvolvido para uso com o Plugin Tainacan
+ Version:      1.0
+ License:      GNU Affero General Public License v3
+ License URI:  https://www.gnu.org/licenses/agpl-3.0.en.html
+ Tags: two-columns, right-sidebar, grid-layout, flexible-header, custom-colors, custom-header, custom-menu, custom-logo, featured-images, footer-widgets, theme-options, threaded-comments, translation-ready, photography, portfolio
+ Template:     tainacan-interface
+
+/*
+- REGRAS GERAIS
+*/
+
+.margin-top-95 { margin-top: 95px; }
+
+/* CORREÇÃO NA MARGEM DO CONTENT */
+
+/* CARROSSEL */
+
+.carrossel-revistas {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.carrossel-revistas a > img {
+	margin: 0 auto;
+	display: block;
+}
+.carrossel-revistas a > span {
+	padding: 10px 20px;
+	font-weight: 700;
+	font-size: 16px;
+	color: #000;
+	text-align: center;
+	display: block;
+}
+.slick-prev { left: -52px; }
+.slick-next { right: -52px; }
+.slick-prev,
+.slick-next {
+	width: 32px !important;
+	height: 32px !important;
+	z-index: 9 !important;
+	top: 136px;
+}
+.slick-prev:before,
+.slick-next:before {
+	content: "" !important;
+	width: 32px;
+	height: 32px;
+	display: block;
+	border-top: 16px solid transparent;
+	border-bottom: 16px solid transparent;
+	opacity: 1;
+}
+.slick-prev:before {
+	border-left: 16px solid transparent;
+	border-right: 16px solid #348497;
+}
+.slick-next:before {
+	border-left: 16px solid #348497;
+	border-right: 16px solid transparent;
+}
+
+@media screen and (max-width: 900px) {
+	.slick-prev { left: -32px; }
+	.slick-next { right: -32px; }
+}
+@media screen and (max-width: 450px) {
+	.slick-prev { left: 0; }
+	.slick-next { right: 0; }
+}
+
+.margin-one-column {
+    margin: 0 4.16666666667%;
+}
