@@ -11,7 +11,7 @@ function enqueue_styles() {
         wp_get_theme()->get('Version')
     );
 }
-add_action( 'wp_enqueue_scripts', 'enqueue_styles' );
+add_action( 'wp_enqueue_scripts', 'enqueue_styles', 99 );
 
 function carousel_files() {
     wp_enqueue_script('call-carousel', get_theme_file_uri('/assets/js/base.js'), null, microtime(), true);
