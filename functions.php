@@ -41,7 +41,7 @@ function carousel_front_page($collection_name, $title_carousel) {
                             <?php if(has_post_thumbnail()) : 
                                 the_post_thumbnail('tainacan-medium'); 
                             else : ?> 
-                                <img src="<?php get_template_directory_uri() ?>/assets/images/noimage.pnh" alt=""> 
+                                <img src="<?php get_template_directory_uri() ?>/assets/images/noimage.png" alt=""> 
                             <?php endif; ?>
                             <span><?php the_title(); ?></span>
                         </a>
