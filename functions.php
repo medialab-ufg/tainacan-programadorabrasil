@@ -20,8 +20,8 @@ add_action('wp_enqueue_scripts','carousel_files');
 
 /**
  * Display carousel of collection
- * @param 1 Collection name | Get the items of collections
- * @param 2 Title of carousel
+ * @param collection_name Collection name | Get the items of collections
+ * @param title_carousel Title of carousel
  */
 function carousel_front_page($collection_name, $title_carousel) {
     $collection = \Tainacan\Repositories\Collections::get_instance()->fetch_one(['name' => $collection_name], 'OBJECT');
@@ -38,7 +38,11 @@ function carousel_front_page($collection_name, $title_carousel) {
                 <?php while ($items->have_posts()): $items->the_post(); ?>
                     <li>
                         <a href="<?php the_permalink(); ?>">
-                            <?php the_post_thumbnail('tainacan-medium'); ?>
+                            <?php if(has_post_thumbnail()) : 
+                                the_post_thumbnail('tainacan-medium'); 
+                            else : ?> 
+                                <img src="<?php get_template_directory_uri() ?>/assets/images/noimage.pnh" alt=""> 
+                            <?php endif; ?>
                             <span><?php the_title(); ?></span>
                         </a>
                     </li>
